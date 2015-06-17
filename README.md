@@ -48,4 +48,4 @@ The main purpose of BIOS is to load OS program. BIOS performs POST ( POWER ON SE
   7) Initialize bootstrap sequence : Bootstrap sequence is to load OS.
 ```
 #### This project is under active development.
-#### Contributers are welcome
+##### This project can have mistakes. Contributers are welcome.
