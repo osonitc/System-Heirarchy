@@ -29,4 +29,6 @@ To learn system heirarchy from basics
   |   O  S    | Operating System
   |-----------|
 
-# This project is under active development. 
+
+### This project is under active development.
+### Contributers are welcome
