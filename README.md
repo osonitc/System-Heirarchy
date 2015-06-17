@@ -1,6 +1,7 @@
 # System-Heirarchy
 To learn system heirarchy from basics
 
+```
   |----------|
   | Power ON |
   |----------|
@@ -28,7 +29,7 @@ To learn system heirarchy from basics
   |-----------|
   |   O  S    | Operating System
   |-----------|
-
+```
 
 #### This project is under active development.
 #### Contributers are welcome
