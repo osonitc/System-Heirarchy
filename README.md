@@ -18,7 +18,8 @@ To learn system heirarchy from basics
   |  M B R   | Master Boot Record, also known as First Sector of Hard Disk
   |----------|
         |
-        |  The conventional MBR code checks the MBR's partition table for a partition set as bootable (the one with active         \ | /       flag set).  
+        |  
+      \ | /       
       /   \
      /      \     
     /   MBR   \
