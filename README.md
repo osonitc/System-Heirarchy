@@ -64,7 +64,7 @@ The main purpose of BIOS is to load OS program. BIOS performs POST ( POWER ON SE
   7) Initialize bootstrap sequence : Bootstrap sequence is to load OS.
 ```
 
-###BootDevices
+###Boot Devices
 ```
 BIOS supports booting from devices such as:
 a. A local hard disk drive via the Master Boot Record (MBR) (and of several MS-DOS partitions on such a disk, or GPT through GRUB 2). 
