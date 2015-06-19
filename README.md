@@ -20,17 +20,17 @@ To learn system heirarchy from basics
         |
         |  
       \ | /       
-      /   \
-     /      \     
-    /   MBR   \
+     /      \
+    /        \     
+   /   MBR    \
   / code checks\
  /  the MBR's   \      Found           |----------|
  \ partition table  _ _ _ _ _ _ _ \    |  V B R   | Volume Boot Record 
   \ for a partition               /    |----------| 
-    \set as    /                            |
-      bootable                              |         
-        \   /                               |   
-         \ /                                |
+   \ set as    /                            |
+    \  bootable                             |         
+     \      /                               |   
+      \    /                                |
 Not found |                                 |
           | MBR may load a secondary boot   |
           | loader which will select a      |    
@@ -52,6 +52,7 @@ First process to start when a system is started is to load the operating system.
 
 ###BIOS
 The main purpose of BIOS is to load OS program. BIOS performs POST ( POWER ON SELF TEST ) for verifying all hardware components are working properly. 
+
 ```
 ###BootDevices
 BIOS supports booting from devices such as:
@@ -64,7 +65,7 @@ Older, less common BIOS-bootable devices include floppy disk drives, SCSI device
 
 ```
   Following are the sequence of instructions that BIOS follows :-
-  
+```  
   1) Load CMOS chip : CMOS stores Computers configuration information. This information is particular to your system.
   2) Load interrupt handlers
   3) Initializes registers and power management
