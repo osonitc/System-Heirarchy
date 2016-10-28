@@ -55,7 +55,7 @@ The main purpose of BIOS is to load OS program. BIOS performs POST ( POWER ON SE
 
   Following are the sequence of instructions that BIOS follows :-
 ```  
-  1) Load CMOS chip : CMOS stores Computers configuration information. This information is particular to your system.
+  1) Load CMOS chip : CMOS stores the BIOS settings. That is why when you remove CMOS battery, the BIOS resets.
   2) Load interrupt handlers
   3) Initializes registers and power management
   4) POST
