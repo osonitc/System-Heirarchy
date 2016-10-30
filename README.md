@@ -2,50 +2,55 @@
 To learn system heirarchy from basics
 
 ```
-  |----------|
-  | Power ON |
-  |----------|
-        |
-        |
-      \ | /
-  |----------|
-  |  B I O S | Basic Input Output System
-  |----------|
-        |
-        |
-      \ | /
-  |----------|
-  |  M B R   | Master Boot Record, also known as First Sector of Hard Disk
-  |----------|
-        |
-        |  
-      \ | /       
-     /      \
-    /        \     
-   /   MBR    \
-  / code checks\
- /  the MBR's   \      Found           |----------|
- \ partition table  _ _ _ _ _ _ _ \    |  V B R   | Volume Boot Record 
-  \ for a partition               /    |----------| 
-   \ set as    /                            |
-    \  bootable                             |         
-     \      /                               |   
-      \    /                                |
-Not found |                                 |
-          | MBR may load a secondary boot   |
-          | loader which will select a      |    
-          |       partition                 |     
-        \ | //_ _ _ _ _ _ _ _ _ _ _ _ _ _ __|
-          |  \
-  |-------------|
-  | Boot Loader |
-  |-------------|
-        |
-        |
-      \ | /
-  |-----------|
-  |   O  S    | Operating System
-  |-----------|
+   ┌──────────┐
+   │ Power ON │
+   └──────────┘
+         │
+         │
+         ▼
+   ┌──────────┐
+   │  B I O S │ Basic Input Output System
+   └──────────┘
+         │
+         │
+         ▼
+   ┌──────────┐
+   │  M B R   │ Master Boot Record, also known as First Sector of Hard Disk
+   └──────────┘
+         │
+         │  
+         ▼
+        ╱ ╲
+       ╱   ╲
+      ╱     ╲
+     ╱       ╲
+    ╱ MBR code╲     
+   ╱checks the ╲
+  ╱    MBR's    ╲
+ ╱   partition   ╲      Found       ┌──────────┐
+ ╲ table for a   ╱─────────────────►│  V B R   │ Volume Boot Record 
+  ╲ partition   ╱                   └──────────┘ 
+   ╲ set as    ╱                          │
+    ╲bootable ╱                           │         
+     ╲       ╱                            │   
+      ╲     ╱                             │
+       ╲   ╱                              │
+        ╲ ╱                               │
+Not found│                                │
+         │ MBR may load a secondary boot  │
+         │ loader which will select a     │    
+         │       partition                │     
+         │◄───────────────────────────────┘
+         ▼  
+  ┌─────────────┐
+  │ Boot Loader │
+  └─────────────┘
+         │
+         │
+         ▼
+   ┌───────────┐
+   │   O  S    │ Operating System
+   └───────────┘
 ```
 
 First process to start when a system is started is to load the operating system. This process is called booting. Firstly, we need to get the instruction to boot. These instructions are stored in BIOS chip.
